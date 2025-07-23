@@ -25,6 +25,15 @@ function updateHands(time) {
     hourHand.style.transform = 'translateX(-50%) rotate(' + hourDeg + 'deg)'
 }
 
+function updateDigital(time) {
+    var hour = String(time.hour).padStart(2, '0')
+    var minute = String(time.minute).padStart(2, '0')
+    var second = String(time.second).padStart(2, '0')
+
+    var digitalClock = document.getElementById('digital-clock')
+    digitalClock.textContent = hour + ':' + minute + ':' + second
+}
+
 function createMainMarks() {
     var container = document.querySelector('.numbers')
     var radius = container.offsetWidth / 2
@@ -101,11 +110,17 @@ function createSmallMarks() {
 function startClock() {
     createMainMarks()
     createSmallMarks()
-    updateHands(getTime())
+    updateAll()
 
     setInterval(function () {
-        updateHands(getTime())
+        updateAll()
     }, 1000)
+}
+
+function updateAll() {
+    var time = getTime()
+    updateHands(time)
+    updateDigital(time)
 }
 
 document.addEventListener('DOMContentLoaded', function () {
