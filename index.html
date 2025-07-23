@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Clocked</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="logo.png"/>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Clocked</title>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="icon" type="image/png" href="logo.png"/>
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <div class="header-text">Clocked</div>
-        <div class="digital-clock" id="digital-clock">00:00:00</div>
-    </header>
-    <main>
-        <div class="clock">
-            <div class="marks"></div>
-            <div class="numbers"></div>
-            <div class="hand hour" id="hour-hand"></div>
-            <div class="hand minute" id="minute-hand"></div>
-            <div class="hand second" id="second-hand"></div>
-            <div class="center-dot"></div>
-        </div>
-    </main>
-    <script src="script.js"></script>
+	<header>
+		<div class="header-text">Clocked</div>
+		<div class="digital-clock" id="digital-clock">00:00:00</div>
+	</header>
+	<main>
+		<div class="clock">
+			<div class="marks"></div>
+			<div class="numbers"></div>
+			<div class="hand hour" id="hour-hand"></div>
+			<div class="hand minute" id="minute-hand"></div>
+			<div class="hand second" id="second-hand"></div>
+			<div class="center-dot"></div>
+		</div>
+	</main>
+	<div class="date-block">
+		<div class="date-line" id="date-numeric">00.00.0000</div>
+		<div class="date-line" id="date-named">Day · Month · Week</div>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
